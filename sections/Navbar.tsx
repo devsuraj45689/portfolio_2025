@@ -20,7 +20,6 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-lg shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-        {/* Logo */}
         <div className="text-2xl font-bold" style={{ color: '#C6A667', fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
           Suraj Sharma
         </div>

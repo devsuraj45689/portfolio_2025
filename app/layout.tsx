@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Suraj Sharma – Frontend Engineer",
   description: "Portfolio of a 4+ years experienced React/Next.js Engineer",
+  icons:{
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  }
 };
 
 export default function RootLayout({ children }) {

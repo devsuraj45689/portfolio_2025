@@ -3,10 +3,10 @@ import { Github, Linkedin, Mail, Code2, Briefcase, Award, ChevronRight } from 'l
 const Skills: React.FC = () => {
     const skills = {
     "Frontend": ["React.js", "Next.js", "React Native", "TypeScript", "JavaScript"],
-    "Styling": ["Tailwind CSS", "CSS3", "Styled Components"],
-    "State & Data": ["Redux", "Context API", "REST APIs", "WebSocket"],
-    "Backend": ["Node.js", "Python", "Express"],
-    "Tools": ["Git", "Docker", "Webpack", "Performance Optimization"],
+    "Styling": ["Tailwind CSS", "CSS3", "Styled Components",'Bootstrap','Ant Design','Material UI'],
+    "State & Data": ["Redux", "Context API", "REST APIs", "WebSocket",'Socket Io'],
+    "Backend": ["Node.js", "Python", "Express",'MongoDb','SQL'],
+    "Tools": ["Git", "Docker", "Webpack", "Performance Optimization",'CI/CD'],
     "Architecture": ["Component Libraries", "Micro-frontends", "Scalable Systems"]
   };
 
