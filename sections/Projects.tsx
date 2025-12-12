@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
     
 
     return (
-        <section className="py-20 px-6" style={{ backgroundColor: '#FFFFFF' }}>
+        <section className="py-20 px-6" style={{ backgroundColor: '#FFFFFF' }} id="projects">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold mb-4 text-center" style={{ color: '#1B1B1C', fontFamily: 'Inter, sans-serif' }}>
             Featured <span style={{ color: '#C6A667' }}>Projects</span>

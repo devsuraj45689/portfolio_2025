@@ -1,5 +1,7 @@
 import { Github, Linkedin, Mail, Code2 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 const Hero: React.FC = () => {
     return (
         <section className="pt-32 pb-20 px-6">
@@ -42,7 +44,9 @@ const Hero: React.FC = () => {
                     fontWeight: 500
                   }}
                 >
-                  Contact Me
+                  <Link href="/contact-us">
+                      Contact Me
+                  </Link>
                 </button>
               </div>
               <div className="flex gap-4 mt-8">

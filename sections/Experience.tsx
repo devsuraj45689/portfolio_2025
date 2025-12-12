@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Code2, Briefcase, Award, ChevronRight } from 'lucide-react';
+import {  ChevronRight } from 'lucide-react';
 
 const Experience: React.FC = () => {
      const experiences = [
@@ -83,7 +83,7 @@ const Experience: React.FC = () => {
     }
   ];
     return (
-       <section className="py-20 px-6" style={{ backgroundColor: '#EDEDED' }}>
+       <section className="py-20 px-6" style={{ backgroundColor: '#EDEDED' }} id="experience">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold mb-16 text-center" style={{ color: '#1B1B1C', fontFamily: 'Inter, sans-serif' }}>
             Professional <span style={{ color: '#C6A667' }}>Experience</span>

@@ -1,4 +1,3 @@
-import { Github, Linkedin, Mail, Code2, Briefcase, Award, ChevronRight } from 'lucide-react';
 
 const Skills: React.FC = () => {
     const skills = {
@@ -11,7 +10,7 @@ const Skills: React.FC = () => {
   };
 
     return (
-        <section className="py-20 px-6" style={{ backgroundColor: '#FCFCFC' }}>
+        <section className="py-20 px-6" style={{ backgroundColor: '#FCFCFC' }} id="skills">
                 <div className="max-w-7xl mx-auto">
                   <h2 className="text-5xl font-bold mb-16 text-center" style={{ color: '#1B1B1C', fontFamily: 'Inter, sans-serif' }}>
                     Technical <span style={{ color: '#C6A667' }}>Skills</span>
