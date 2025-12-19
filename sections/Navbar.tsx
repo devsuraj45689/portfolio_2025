@@ -9,19 +9,23 @@ export default function Navbar() {
 
   useEffect(() => {
     const firstHash = window.location.hash.slice(1);
-    const pathName = window.location.pathname.slice(1);
-    if(pathName){
-      setActiveSection(pathName);
-    } else if (firstHash) {
-      setActiveSection(firstHash);
-    }    const handleScroll = () => {
+    const pathName = window.location.pathname.split("/")[1].trim() || 'home';
+    if(firstHash){
+        setActiveSection(firstHash);
+    }
+    else {
+      if(pathName){
+        console.log(pathName,"executing>19")
+        setActiveSection(pathName);
+      }
+    }   
+        
+    const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  console.log('activeSection',activeSection,"active session>24")
 
   const navItems = [
     {
@@ -57,8 +61,9 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-8">
           {navItems.map((item) => {
-            const isActive = activeSection === item.href?.split("/")[0]?.toLowerCase();
-            const newActiveSection = item.href?.split("/")[0]?.toLowerCase();
+            const hrefPath = item.href?.includes("#") ? item.href?.split("#")[1]?.toLowerCase() : item.href?.split("/")[0]?.toLowerCase();
+            const isActive = activeSection === hrefPath;
+            const newActiveSection = hrefPath;
             return (
             <button
               key={item.title}
@@ -90,16 +95,20 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-lg shadow-sm">
           <div className="flex flex-col px-6 py-4 gap-4">
-            {navItems.map((item) => (
+            {navItems.map((item) => {
+              const hrefPath = item.href?.includes("#") ? item.href?.split("#")[1]?.toLowerCase() : item.href?.split("/")[0]?.toLowerCase();
+              const isActive = activeSection === hrefPath;
+              const newActiveSection = hrefPath;
+              return (
               <button
                 key={item.title}
                 onClick={() => {
-                  setActiveSection(item.title?.toLowerCase());
-                  setMobileMenuOpen(false); // close menu on click
+                  setActiveSection(newActiveSection);
+                  setMobileMenuOpen(false);
                 }}
                 className="transition-colors font-medium text-left"
                 style={{ 
-                  color: activeSection === item.href?.split("/")[0] ? '#C6A667' : '#666666',
+                  color: isActive ? '#C6A667' : '#666666',
                   fontFamily: 'Inter, sans-serif'
                 }}
               >
@@ -107,7 +116,9 @@ export default function Navbar() {
                   {item.title}
                 </Link>
               </button>
-            ))}
+            )
+            }
+            )}
           </div>
         </div>
       )}
