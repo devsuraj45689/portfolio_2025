@@ -6,7 +6,7 @@ import { FooterSection,NavbarSection } from "../sections";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Suraj Sharma – Frontend Engineer",
+  title: "Suraj Sharma – Full Stack Engineer",
   description: "Portfolio of a 4+ years experienced React/Next.js Engineer",
   icons:{
     icon: '/favicon.png',
