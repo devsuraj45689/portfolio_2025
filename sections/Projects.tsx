@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import CardImage  from '../components/CardImage';
+import Link from 'next/link';
 
 const Projects: React.FC = () => {
      const projects = [
@@ -8,14 +9,14 @@ const Projects: React.FC = () => {
           description: "Full-featured marketplace with subscription models, payment gateway integration, and location-based filtering reducing search times by 50%.",
           images:['/loffre-project-home.png','/loffre-project-chat.png'],
           tech: ["Next.js", "React.js", "Payment Gateway", "REST API"],
-          link: "#"
+          link: "https://loffre.ma"
         },
          {
           title: "Real-time Chat System",
           description: "Socket-based real-time communication system with notifications, presence indicators, and message persistence.",
           images:['/chat-ui.png','/loffre-project-chat.png'],
           tech: ["React.js","Socket Io", "Node.js"],
-          link: "#"
+          link: "https://loffre.ma/fr/chat?type=product"
         },
         {
           title: "Satellite Tracking System",
@@ -29,7 +30,7 @@ const Projects: React.FC = () => {
           description: "Comprehensive matchmaking platform with advanced search, 70+ API integrations, role-based admin panel, and subscription features.",
           images:['/sahi-saathi-homepage.png','/sahi-saathi-scondary.png'],
           tech: ["React.js", "Tailwind CSS", "Multi-step Forms"],
-          link: "#"
+          link: "https://www.sahisaathimatrimony.com/"
         },
         {
           title: "Component Library",
@@ -87,13 +88,14 @@ const Projects: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  <a 
+                  <Link 
                     href={project.link}
+                    target='_blank'
                     className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
                     style={{ color: '#C6A667', fontFamily: 'Inter, sans-serif' }}
                   >
                     View Project <ChevronRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

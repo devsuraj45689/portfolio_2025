@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-white text-gray-900"}>
+      <body className={inter.className + "bg-white text-gray-900"}>
         <div className="min-h-screen bg-[#FCFCFC]" style={{ fontFamily: 'Inter, sans-serif' }}>
           <style>{`
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

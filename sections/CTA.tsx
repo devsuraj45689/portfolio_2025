@@ -1,5 +1,6 @@
 import React from 'react';
 import {Mail} from 'lucide-react';
+import Link from 'next/link';
 
 const CTA: React.FC = () => {
     return (
@@ -12,6 +13,7 @@ const CTA: React.FC = () => {
             I'm always interested in hearing about new projects and opportunities.
           </p>
           <div className="flex gap-4 justify-center">
+            <Link href="/contact-us">
             <button 
               className="px-10 py-4 rounded-lg font-medium text-lg transition-all hover:shadow-lg flex items-center gap-2"
               style={{ 
@@ -24,6 +26,7 @@ const CTA: React.FC = () => {
               <Mail className="w-5 h-5" />
               Get In Touch
             </button>
+          </Link>
           </div>
         </div>
       </section>

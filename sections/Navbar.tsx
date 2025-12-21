@@ -2,10 +2,13 @@
 import { useState, useEffect } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const firstHash = window.location.hash.slice(1);
@@ -15,7 +18,6 @@ export default function Navbar() {
     }
     else {
       if(pathName){
-        console.log(pathName,"executing>19")
         setActiveSection(pathName);
       }
     }   
@@ -25,7 +27,7 @@ export default function Navbar() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
   const navItems = [
     {
@@ -61,7 +63,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-8">
           {navItems.map((item) => {
-            const hrefPath = item.href?.includes("#") ? item.href?.split("#")[1]?.toLowerCase() : item.href?.split("/")[0]?.toLowerCase();
+            const hrefPath = item.href?.includes("#") ? item.href?.split("#")[1]?.toLowerCase() : item.href?.split("/")[1]?.toLowerCase() || 'home';
             const isActive = activeSection === hrefPath;
             const newActiveSection = hrefPath;
             return (
@@ -96,7 +98,7 @@ export default function Navbar() {
         <div className="md:hidden bg-white/95 backdrop-blur-lg shadow-sm">
           <div className="flex flex-col px-6 py-4 gap-4">
             {navItems.map((item) => {
-              const hrefPath = item.href?.includes("#") ? item.href?.split("#")[1]?.toLowerCase() : item.href?.split("/")[0]?.toLowerCase();
+              const hrefPath = item.href?.includes("#") ? item.href?.split("#")[1]?.toLowerCase() : item.href?.split("/")[1]?.toLowerCase() || 'home';
               const isActive = activeSection === hrefPath;
               const newActiveSection = hrefPath;
               return (

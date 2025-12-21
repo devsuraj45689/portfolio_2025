@@ -33,7 +33,9 @@ const Hero: React.FC = () => {
                     fontWeight: 500
                   }}
                 >
-                  View Work
+                  <Link href="/#projects">
+                    View Work
+                  </Link>
                 </button>
                 <button 
                   className="px-8 py-3 rounded-lg font-medium transition-all hover:shadow-md"

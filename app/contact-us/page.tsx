@@ -371,7 +371,8 @@ export default function ContactUsPage() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="h-12 text-base font-semibold flex items-center justify-center gap-2 bg-[var(--primary)] text-[var(--text-inverse)] hover:opacity-90 transition shadow-lg"
+                  variant="default"
+                  className="h-12 text-base font-semibold flex items-center justify-center gap-2 transition shadow-lg bg-[var(--primary)] text-white hover:bg-yellow-800"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                   <Send size={18} />
