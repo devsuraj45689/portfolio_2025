@@ -158,8 +158,8 @@ export default function ContactUsPage() {
             Let&apos;s Work Together
           </h1>
           <p className="text-lg max-w-2xl mx-auto text-[var(--text-body)] leading-relaxed">
-            Have a project in mind or just want to say hello? I'm always open to
-            new opportunities, creative ideas, or partnerships.
+            Have a project in mind, a role to discuss, or need help owning frontend features?
+            I’m open to <strong>remote or hybrid opportunities, contract work, and collaborations on product-focused teams.</strong>
           </p>
         </div>
 
@@ -173,10 +173,11 @@ export default function ContactUsPage() {
               </div>
 
               <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-2">
-                Email Me
+                Email
               </h3>
               <p className="text-sm text-[var(--text-body)] mb-3">
-                Quick response within 24 hours
+                For roles, projects, or detailed discussions
+                <br /><strong>Response within 24 hours</strong>
               </p>
 
               <Link
@@ -223,7 +224,7 @@ export default function ContactUsPage() {
                 WhatsApp
               </h3>
               <p className="text-sm text-[var(--text-body)] mb-3">
-                Instant messaging, quick replies
+                Quick questions or initial conversations
               </p>
 
               <button
@@ -272,7 +273,6 @@ export default function ContactUsPage() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name + Email */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">
@@ -337,7 +337,7 @@ export default function ContactUsPage() {
                     name="subject"
                     value={form.subject}
                     onChange={handleChange}
-                    placeholder="Project inquiry"
+                    placeholder="Frontend role / Project inquiry"
                     className={errors.subject ? "border-red-600" : ""}
                   />
                   {errors.subject && (
@@ -359,7 +359,7 @@ export default function ContactUsPage() {
                   className={`min-h-[160px] ${
                     errors.message ? "border-red-600" : ""
                   }`}
-                  placeholder="Tell me about your project..."
+                  placeholder="Briefly describe your role, project, or requirements."
                 />
                 {errors.message && (
                   <p className="text-red-600 text-sm">{errors.message}</p>
@@ -393,7 +393,7 @@ export default function ContactUsPage() {
 
         {/* Footer Note */}
         <p className="text-center text-sm text-[var(--text-body)] mt-12">
-          Your information is safe with me. I will never share your details.
+            Your information is safe with me. I don’t share personal details with third parties.
         </p>
       </div>
     </section>

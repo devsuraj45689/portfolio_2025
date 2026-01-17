@@ -8,21 +8,22 @@ const Hero: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-block mb-6 px-4 py-2 rounded-full" style={{ backgroundColor: '#EDEDED' }}>
+              {/* <div className="inline-block mb-6 px-4 py-2 rounded-full" style={{ backgroundColor: '#EDEDED' }}>
                 <span className="text-sm font-medium" style={{ color: '#C6A667', fontFamily: 'Inter, sans-serif' }}>
-                  Available for opportunities
+                  Frontend Software Engineer (SDE-II)
                 </span>
-              </div>
+              </div> */}
               <h1 className="text-6xl font-bold mb-6 leading-tight" style={{ color: '#1B1B1C', fontFamily: 'Inter, sans-serif' }}>
                 Hi, I'm <span style={{ color: '#C6A667' }}>Suraj Sharma</span>
               </h1>
               <h2 className="text-4xl font-bold mb-6" style={{ color: '#1B1B1C', fontFamily: 'Inter, sans-serif' }}>
-                Full Stack Developer
+                Frontend Software Engineer (SDE-II)
               </h2>
-              <p className="text-xl mb-8 leading-relaxed" style={{ color: '#666666', fontFamily: 'Inter, sans-serif' }}>
-                Specializing in React.js, Next.js, Nodejs and scalable frontend architectures. 
-                Passionate about building performant, user-centric applications with modern web technologies.
+              <p className="text-xl mb-4 leading-relaxed" style={{ color: '#666666', fontFamily: 'Inter, sans-serif' }}>
+                I build <b>scalable, performance-focused web applications</b> using <b>React and modern frontend architectures</b>.
+Experienced in <b>owning frontend features end-to-end</b>, optimizing UI performance, and collaborating with <b>remote and hybrid teams</b>.
               </p>
+              <p className="text-xl mb-8 leading-relaxed" style={{ color: '#666666', fontFamily: 'Inter, sans-serif' }}><b>Open to</b> : Remote & Hybrid roles (Contract / Full-time)</p>
               <div className="flex gap-4">
                 <button 
                   className="px-8 py-3 rounded-lg font-medium transition-all hover:shadow-lg"

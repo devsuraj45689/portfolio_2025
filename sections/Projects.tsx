@@ -1,49 +1,50 @@
 import { ChevronRight } from 'lucide-react';
 import CardImage  from '../components/CardImage';
 import Link from 'next/link';
+import { Fragment } from 'react';
 
 const Projects: React.FC = () => {
      const projects = [
         {
           title: "E-commerce Platform",
-          description: "Full-featured marketplace with subscription models, payment gateway integration, and location-based filtering reducing search times by 50%.",
+          description: () => <Fragment>High-scale marketplace with <b>subscription flows, payment integration, and location-based search</b>, optimized to <b>reduce search latency by ~50%</b> through client-side caching and efficient filtering</Fragment>,
           images:['/loffre-project-home.png','/loffre-project-chat.png'],
           tech: ["Next.js", "React.js", "Payment Gateway", "REST API"],
           link: "https://loffre.ma"
         },
          {
           title: "Real-time Chat System",
-          description: "Socket-based real-time communication system with notifications, presence indicators, and message persistence.",
+          description: () => <Fragment>Frontend-heavy real-time messaging interface with <b>live updates, notifications, and presence indicators</b>, designed for low-latency UX and reliable state synchronization.</Fragment>,
           images:['/chat-ui.png','/loffre-project-chat.png'],
-          tech: ["React.js","Socket Io", "Node.js"],
+          tech: ["React","WebSockets", "Real-Time State Management"],
           link: "https://loffre.ma/fr/chat?type=product"
         },
         {
           title: "Satellite Tracking System",
-          description: "Advanced satellite tracking platform handling 20K+ data points with real-time WebSocket updates, video streaming, and classified data querying system.",
+          description: () => <Fragment>Data-intensive frontend application handling <b>20K+ live data points</b>, featuring real-time updates, optimized rendering, and background workers for smooth visualization at scale.</Fragment>,
           images:["https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&q=80"],
-          tech: ["React.js", "WebSocket", "Node.js", "Python","Web Worker"],
+          tech: ["React", "WebSockets", "Web Workers", "Performance Optimization"],
           link: "#"
         },
         {
           title: "Matrimony Platform",
-          description: "Comprehensive matchmaking platform with advanced search, 70+ API integrations, role-based admin panel, and subscription features.",
+          description: () => <Fragment>Feature-rich matchmaking platform with <b>advanced search, dynamic filtering, and multi-step onboarding flows</b>, designed to handle <b>complex user journeys and role-based access</b> with a strong focus on UX consistency and performance.</Fragment>,
           images:['/sahi-saathi-homepage.png','/sahi-saathi-scondary.png'],
-          tech: ["React.js", "Tailwind CSS", "Multi-step Forms"],
+          tech: ["React", "Tailwind CSS", "Form State Management","Dynamic Filtering"],
           link: "https://www.sahisaathimatrimony.com/"
         },
         {
           title: "Component Library",
-          description: "Custom component library built for scalability, enabling consistent UI and efficient code reuse across multiple applications.",
+          description: () => <Fragment>Scalable <b>React component library</b> designed for reuse across multiple products, improving UI consistency and reducing development time.</Fragment>,
           images:["https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80"],
-          tech: ["React.js", "TypeScript", "Storybook"],
+          tech: ["React", "TypeScript", "Storybook"],
           link: "#"
         },
         {
           title: "Admin Dashboard",
-          description: "Comprehensive admin panel with role-based access control, data visualization, and complex table management with caching.",
+          description: () => <Fragment>Role-based admin interface with <b>complex data tables, caching, and interactive visualizations</b>, built to handle high-volume datasets efficiently.</Fragment>,
           images:['/admin-page.png'],
-          tech: ["React.js", "Redux", "Charts", "Performance"],
+          tech: ["React", "Redux", "Data Visualization", "Performance Optimization"],
           link: "#"
         }
       ];
@@ -71,7 +72,7 @@ const Projects: React.FC = () => {
                     {project.title}
                   </h3>
                   <p className="text-sm mb-4 leading-relaxed" style={{ color: '#666666', fontFamily: 'Inter, sans-serif' }}>
-                    {project.description}
+                    {project.description()}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, i) => (

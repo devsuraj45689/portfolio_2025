@@ -1,87 +1,135 @@
 import {  ChevronRight } from 'lucide-react';
+import { Fragment } from 'react';
 
 const Experience: React.FC = () => {
      const experiences = [
-    {
-      company: "Sunday Labs (Pidge.in)",
-      role: "Front End SDE-2",
-      period: "May 2025 - Present",
-      duration: "8 mos",
-      location: "Gurugram, Haryana, India · Hybrid",
-      type: "Full-time",
-      highlights: [
-        "Scaled existing features and developed new functionalities in React.js and React Native",
-        "Built a custom component library for consistent UI and efficient reuse",
-        "Refactored complex table modules with generic column structures and caching",
-        "Developed cached, reusable filtering system across multiple tables"
-      ],
-      skills: ["React.js", "React Native", "Component Architecture", "Performance Optimization"]
-    },
-    {
-      company: "Loffre.ma",
-      role: "Senior Frontend Developer",
-      period: "Jan 2025 - May 2025",
-      duration: "5 mos",
-      location: "India · Remote",
-      type: "Full-time",
-      highlights: [
-        "Led codebase refactoring and integration of scalable architecture",
-        "Implemented robust theme management and error-handling mechanisms",
-        "Developed auth, chat, notification, job, and product-selling flows",
-        "Reduced search response times by 50% through caching mechanisms",
-        "Integrated subscription models and payment gateway"
-      ],
-      skills: ["React.js", "Next.js", "Architecture Design", "Payment Integration"]
-    },
-    {
-      company: "114 AI, Inc",
-      role: "Senior Front End Consultant",
-      period: "Nov 2024 - Mar 2025",
-      duration: "5 mos",
-      location: "India · Remote",
-      type: "Part-time",
-      highlights: [
-        "Provided support to development team on critical features",
-        "Implemented custom socket architecture for real-time features",
-        "Contributed to notifications module development"
-      ],
-      skills: ["React.js", "WebSocket", "Git", "Consulting"]
-    },
-    {
-      company: "114 AI, Inc",
-      role: "Frontend Developer",
-      period: "Jan 2022 - Oct 2024",
-      duration: "2 yrs 10 mos",
-      location: "Bengaluru, Karnataka, India · On-site",
-      type: "Full-time",
-      highlights: [
-        "Handled large datasets for satellite tracking project with 20K+ data points",
-        "Designed scalable front-end architecture using Git submodules",
-        "Developed real-time tracking features with WebSockets",
-        "Built advanced querying system for classified data",
-        "Created UUID-based caching mechanisms for dynamic queries",
-        "Enabled video and image streaming using Node.js",
-        "Wrote Python scripts for data transformation and web scraping"
-      ],
-      skills: ["React.js", "Next.js", "WebSocket", "Node.js", "Python", "Data Visualization"]
-    },
-    {
-      company: "Sahi Saathi Matrimony",
-      role: "Front End Developer",
-      period: "Aug 2024 - Oct 2024",
-      duration: "3 mos",
-      location: "Bengaluru, Karnataka, India · Remote",
-      type: "Part-time",
-      highlights: [
-        "Developed robust authentication and multi-step profile creation",
-        "Implemented advanced search, filtering, and matchmaking features",
-        "Built admin panel with role-based access control",
-        "Integrated 70+ APIs across the platform",
-        "Implemented subscription-based premium features"
-      ],
-      skills: ["React.js", "Tailwind CSS", "API Integration"]
-    }
-  ];
+  {
+    company: "Sunday Labs (Pidge.in)",
+    role: "Frontend Software Engineer (SDE-II)",
+    period: "May 2025 - Nov 2025",
+    duration: "7 months",
+    location: "Gurugram, Haryana, India · Hybrid",
+    type: "Full-time",
+    highlights: [
+      <Fragment>
+        <strong>Owned and scaled</strong> core frontend features using <strong>React</strong> in a <strong>product-scale application</strong>
+      </Fragment>,
+      <Fragment>
+        <strong>Designed and implemented</strong> a <strong>custom, reusable component library</strong>, improving <strong>UI consistency</strong> and reducing development effort
+      </Fragment>,
+      <Fragment>
+        Refactored <strong>complex table modules</strong> with <strong>generic column structures</strong> and <strong>caching</strong>
+      </Fragment>,
+      <Fragment>
+        Refactored <strong>data-heavy table modules</strong> using <strong>generic column abstractions</strong> and <strong>client-side caching</strong> to improve <strong>rendering performance</strong>
+      </Fragment>,
+      <Fragment>
+        Built a <strong>shared, reusable filtering system</strong> leveraged across <strong>multiple high-traffic data views</strong>, improving <strong>maintainability</strong> and <strong>performance</strong>
+      </Fragment>
+    ],
+    skills: ["React", "Component Architecture", "Performance Optimization"]
+  },
+
+  {
+    company: "Loffre.ma",
+    role: "Senior Frontend Developer",
+    period: "Jan 2025 - April 2025",
+    duration: "5 months",
+    location: "India · Remote",
+    type: "Contract",
+    highlights: [
+      <Fragment>
+        <strong>Took ownership</strong> of a partially built product and <strong>restructured the frontend architecture</strong> for <strong>stable, scalable delivery</strong>
+      </Fragment>,
+      <Fragment>
+        Implemented <strong>robust theme management</strong>, <strong>global error handling</strong>, and <strong>consistent UX patterns</strong>
+      </Fragment>,
+      <Fragment>
+        Built and shipped <strong>core user flows</strong> including <strong>authentication</strong>, <strong>chat</strong>, <strong>notifications</strong>, job listings, and product-selling features
+      </Fragment>,
+      <Fragment>
+        <strong>Optimized search and listing performance</strong> using <strong>client-side caching</strong>, reducing response times by <strong>~50%</strong>
+      </Fragment>,
+      <Fragment>
+        Integrated <strong>subscription workflows</strong> and <strong>payment gateways</strong> for <strong>B2B use cases</strong>
+      </Fragment>
+    ],
+    skills: ["React", "Next.js", "Frontend Architecture", "Payment Integration"]
+  },
+
+  {
+    company: "114 AI, Inc",
+    role: "Senior Front End Consultant",
+    period: "Nov 2024 - Mar 2025",
+    duration: "5 mos",
+    location: "India · Remote",
+    type: "Part-time",
+    highlights: [
+      <Fragment>
+        Provided <strong>consultative support</strong> on <strong>critical frontend features</strong>
+      </Fragment>,
+      <Fragment>
+        Implemented <strong>custom socket architecture</strong> for <strong>real-time features</strong>
+      </Fragment>,
+      <Fragment>
+        Contributed to <strong>notification system development</strong>
+      </Fragment>
+    ],
+    skills: ["React", "WebSockets", "Consulting"]
+  },
+
+  {
+    company: "114 AI, Inc",
+    role: "Frontend Developer",
+    period: "Jan 2022 - Oct 2024",
+    duration: "2 yrs 10 months",
+    location: "Bengaluru, Karnataka, India · On-site",
+    type: "Full-time",
+    highlights: [
+      <Fragment>
+        Built and maintained <strong>data-intensive frontend applications</strong> handling <strong>20K+ live data points</strong>
+      </Fragment>,
+      <Fragment>
+        Developed <strong>real-time tracking interfaces</strong> using <strong>WebSockets</strong> with <strong>optimized rendering</strong>
+      </Fragment>,
+      <Fragment>
+        Designed <strong>scalable frontend architecture</strong> supporting <strong>modular feature development</strong>
+      </Fragment>,
+      <Fragment>
+        Implemented <strong>client-side caching strategies</strong> using <strong>UUID-based keys</strong> to reduce redundant data fetching
+      </Fragment>,
+      <Fragment>
+        Collaborated with <strong>backend and product teams</strong> to deliver <strong>secure, high-performance UI solutions</strong>
+      </Fragment>
+    ],
+    skills: ["React", "Real-Time UI", "WebSockets", "Frontend Architecture", "Performance Optimization"]
+  },
+
+  {
+    company: "Sahi Saathi Matrimony",
+    role: "Front End Developer",
+    period: "Aug 2024 - Oct 2024",
+    duration: "3 mos",
+    location: "Bengaluru, Karnataka, India · Remote",
+    type: "Part-time",
+    highlights: [
+      <Fragment>
+        Built <strong>authentication flows</strong> and <strong>multi-step profile creation</strong> with strong validation and UX consistency
+      </Fragment>,
+      <Fragment>
+        Implemented <strong>advanced search</strong>, <strong>dynamic filtering</strong>, and <strong>matchmaking interfaces</strong>
+      </Fragment>,
+      <Fragment>
+        Developed an <strong>admin dashboard</strong> with <strong>role-based access control</strong>
+      </Fragment>,
+      <Fragment>
+        Integrated <strong>subscription-based premium features</strong>, handling <strong>gated UI states</strong> and user entitlements
+      </Fragment>
+    ],
+    skills: ["React", "Form State Management", "Dynamic Filtering", "Role-Based UI"]
+  }
+];
+
     return (
        <section className="py-20 px-6" style={{ backgroundColor: '#EDEDED' }} id="experience">
         <div className="max-w-7xl mx-auto">

@@ -1,13 +1,55 @@
 
 const Skills: React.FC = () => {
     const skills = {
-    "Frontend": ["React.js", "Next.js", "React Native", "TypeScript", "JavaScript"],
-    "Styling": ["Tailwind CSS", "CSS3", "Styled Components",'Bootstrap','Ant Design','Material UI'],
-    "State & Data": ["Redux", "Context API", "REST APIs", "WebSocket",'Socket Io'],
-    "Backend": ["Node.js", "Python", "Express",'MongoDb','SQL'],
-    "Tools": ["Git", "Docker", "Webpack", "Performance Optimization",'CI/CD'],
-    "Architecture": ["Component Libraries", "Micro-frontends", "Scalable Systems"]
-  };
+      "Frontend Core": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript"
+  ],
+  "UI & Styling": [
+    "Tailwind CSS",
+    "CSS3",
+    "Ant Design",
+    "Material UI",
+    "Bootstrap"
+  ],
+
+  "State & Data Management": [
+    "Redux",
+    "React Query",
+    "Zustand",
+    "Context API",
+    "REST APIs"
+  ],
+
+  "Real-Time & Performance": [
+    "WebSockets",
+    "Client-side Caching",
+    "Lazy Loading",
+    "Code Splitting",
+    "Memoization"
+  ],
+
+  "Architecture & Systems": [
+    "Component Architecture",
+    "Reusable Component Libraries",
+    "Scalable Frontend Systems"
+  ],
+
+  "Tooling": [
+    "Git",
+    "Webpack",
+    "Vite",
+    "CI/CD"
+  ],
+
+  "Backend (Working Knowledge)": [
+    "Node.js",
+    "REST APIs"
+  ]
+};
+
 
     return (
         <section className="py-20 px-6" style={{ backgroundColor: '#FCFCFC' }} id="skills">
